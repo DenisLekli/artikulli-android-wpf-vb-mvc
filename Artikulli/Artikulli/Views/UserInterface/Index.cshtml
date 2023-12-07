@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ArtikullServices.Models.Produkt>
+
+<h2>Lista E PRodukteve</h2>
+<div>
+    <input placeholder="search" id="searchBox" />
+    <button hidden id="searchButton">search</button>
+</div>
+
+
+<span id="searchContainer">
+    @await Html.PartialAsync("_Search")
+</span>
+<a asp-action="Create" class="btn btn-primary">Shto Produkt</a>
+@section Scripts {
+    <script type="text/javascript" src="~/js/ArtikullSearches.js"></script>
+}

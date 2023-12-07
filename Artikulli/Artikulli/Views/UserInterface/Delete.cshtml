@@ -1,0 +1,42 @@
+﻿@model ArtikullServices.Models.Produkt
+
+<h2>Fshi Produkt</h2>
+
+<div>
+    <h4>A jeni i sigurt se doni te fshini kete produkt?</h4>
+    <hr />
+    <dl class="row">
+        
+
+        <dt class="col-sm-2">Emertimi</dt>
+        <dd class="col-sm-10">@Model.Emertimi</dd>
+
+        <dt class="col-sm-2">Njesia</dt>
+        <dd class="col-sm-10">@Model.Njesia</dd>
+
+        <dt class="col-sm-2">DataSkadences</dt>
+        <dd class="col-sm-10">@Model.DataSkadences.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Cmimi</dt>
+        <dd class="col-sm-10">@Model.Cmimi</dd>
+
+        <dt class="col-sm-2">Lloj</dt>
+        <dd class="col-sm-10">@Model.Lloj</dd>
+
+        <dt class="col-sm-2">KaTvsh</dt>
+        <dd class="col-sm-10">@Model.KaTvsh</dd>
+
+        <dt class="col-sm-2">Tipi</dt>
+        <dd class="col-sm-10">@Model.Tipi</dd>
+
+        <dt class="col-sm-2">BarkodKod</dt>
+        <dd class="col-sm-10">@Model.BarkodKod</dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.id" method="post">
+        <input type="submit" value="Fshi" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+
+

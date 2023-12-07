@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivitys">
+    <EditText
+        android:id="@+id/BarkodKod"
+        android:layout_width="86dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="165dp"
+        android:hint="BarkodKod"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="171dp" />
+
+    <Spinner
+        android:id="@+id/Tipi"
+        android:layout_width="161dp"
+        android:layout_height="79dp"
+        android:layout_below="@+id/BarkodKod"
+        android:layout_marginTop="24dp"
+        android:hint="Tipi"
+        app:layout_constraintTop_toBottomOf="@+id/BarkodKod"
+        tools:layout_editor_absoluteX="204dp" />
+
+    <EditText
+        android:id="@+id/Njesia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/Tipi"
+        android:hint="Njesia"
+        app:layout_constraintTop_toBottomOf="@+id/Tipi"
+        tools:layout_editor_absoluteX="128dp" />
+
+    <TextView
+        android:id="@+id/DataSkadences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Njesia"
+        android:hint="DataSkadences"
+        app:layout_constraintTop_toBottomOf="@+id/Njesia"
+        tools:layout_editor_absoluteX="79dp" />
+
+    <EditText
+        android:id="@+id/Cmimi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DataSkadences"
+        android:hint="Cmimi"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/DataSkadences"
+        tools:layout_editor_absoluteX="150dp" />
+
+    <EditText
+        android:id="@+id/Emertimi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Cmimi"
+        android:ems="10"
+        android:hint="Emertimi"
+        app:layout_constraintTop_toBottomOf="@+id/Cmimi"
+        tools:layout_editor_absoluteX="57dp" />
+
+
+    <Spinner
+        android:id="@+id/Lloj"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/Emertimi"
+        android:ems="10"
+        android:hint="Lloj"
+        app:layout_constraintTop_toBottomOf="@+id/Emertimi"
+        tools:layout_editor_absoluteX="185dp"  />
+
+    <Switch
+        android:id="@+id/KaTvsh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Lloj"
+        android:text="KaTvsh"
+        app:layout_constraintTop_toBottomOf="@+id/Lloj"
+        tools:layout_editor_absoluteX="150dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/KaTvsh"
+        android:text="add"
+        app:layout_constraintTop_toBottomOf="@+id/KaTvsh"
+        tools:layout_editor_absoluteX="128dp"
+
+        />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:text="back"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:layout_editor_absoluteX="128dp"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

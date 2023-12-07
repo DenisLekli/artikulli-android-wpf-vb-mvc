@@ -1,0 +1,31 @@
+﻿<Window x:Class="ArtikulliWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArtikulliWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="search"  Margin="71,49,614,346" />
+        <Button Content="search" HorizontalAlignment="Left" Margin="202,54,0,0" VerticalAlignment="Top" Click="search_onclicks" Width="65"/>
+        <ListBox Name="produktListsView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="55,129,451,157">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding Emertimi}" />
+                        <Button Grid.Column="1" Click="Edit_Product"  Content="edit" CommandParameter="{Binding id}"></Button>
+                        <Button Grid.Column="2" Click="Delete_Product"  Content="delete" CommandParameter="{Binding id}"></Button>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Add Product" HorizontalAlignment="Left" Margin="71,334,0,0" VerticalAlignment="Top" Click="Add_Product"/>
+
+    </Grid>
+</Window>

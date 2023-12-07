@@ -1,0 +1,80 @@
+﻿<Window x:Class="AddViews"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArtikulliVB"
+        mc:Ignorable="d"
+        Title="AddViews" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Emertimi -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Emertimi:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtEmertimi" Width="200"/>
+        </StackPanel>
+
+        <!-- Njesia -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Njesia:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNjesia" Width="200"/>
+        </StackPanel>
+
+        <!-- DataSkadences -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Data Skadences:" Width="100" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dpDataSkadences" Width="200"/>
+        </StackPanel>
+
+        <!-- Cmimi -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Cmimi:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtCmimi" Width="200"/>
+        </StackPanel>
+
+        <!-- Lloj -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Lloj:" Width="100" VerticalAlignment="Center"/>
+            <RadioButton x:Name="rbImportuar" Content="Importuar"/>
+            <RadioButton x:Name="rbVendi" Content="Vendi" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- KaTvsh -->
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Ka Tvsh:" Width="100" VerticalAlignment="Center"/>
+            <CheckBox x:Name="chkTvsh" Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <!-- Tipi -->
+        <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Tipi:" Width="100" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cmbTipi" Width="200">
+                <ComboBoxItem Content="Ushqimore"/>
+                <ComboBoxItem Content="Bulmet"/>
+                <ComboBoxItem Content="Pije"/>
+                <ComboBoxItem Content="Embelsire"/>
+                <!-- Add more items as needed -->
+            </ComboBox>
+        </StackPanel>
+
+        <!-- BarkodKod -->
+        <StackPanel Grid.Row="7" Orientation="Horizontal" Margin="0,0,0,5">
+            <Label Content="Barkod/Kod:" Width="100" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtBarkodKod" Width="200"/>
+        </StackPanel>
+
+        <!-- Add your button here, e.g., for navigation -->
+        <Button Content="Navigate" Click="btnInsert_Click" Grid.Row="8" Width="100" HorizontalAlignment="Left"/>
+    </Grid>
+</Window>

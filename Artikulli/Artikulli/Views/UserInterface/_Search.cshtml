@@ -1,0 +1,39 @@
+﻿
+
+@model IEnumerable<ArtikullServices.Models.Produkt>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Emertimi</th>
+            <th>Njesia</th>
+            <th>DataSkadences</th>
+            <th>Cmimi</th>
+            <th>Lloj</th>
+            <th>KaTvsh</th>
+            <th>Tipi</th>
+            <th>BarkodKod</th>
+            <th>Veprimet</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produkt in Model)
+        {
+            <tr>
+
+                <td>@produkt.Emertimi</td>
+                <td>@produkt.Njesia</td>
+                <td>@produkt.DataSkadences.ToShortDateString()</td>
+                <td>@produkt.Cmimi</td>
+                <td>@produkt.Lloj</td>
+                <td>@(produkt.KaTvsh ? "Yes" : "No")</td>
+                <td>@produkt.Tipi</td>
+                <td>@produkt.BarkodKod</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@produkt.id">Perditeso</a> |
+                    <a asp-action="Delete" asp-route-id="@produkt.id">Fshi</a>
+                </td>
+            </tr>
+        }
+    </tbody>            
+</table>
